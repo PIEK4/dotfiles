@@ -1,0 +1,39 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '~/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# aliases
+alias vi='nvim'
+alias ls='eza'
+alias la='eza -lah'
+alias cd='z'
+alias cl="clear"
+
+# source/bundle antidote
+source /usr/share/zsh-antidote/antidote.zsh
+antidote bundle ~/.config/zsh/plugins.txt > ~/.config/zsh/antidote.zsh
+# initialize plugins 
+antidote load ~/.config/zsh/plugins.txt
+
+# starship prompt
+eval "$(starship init zsh)"
+# zoxide better cd
+eval "$(zoxide init zsh)"
+
+# set default apps
+export EDITOR=nvim
+
+# run fastfetch on new termainal
+if [[ -o interactive ]]; then
+    fastfetch
+fi
+
