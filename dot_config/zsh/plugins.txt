@@ -1,0 +1,17 @@
+# Core UX
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+# Nice to Have
+MichaelAquilina/zsh-you-should-use
+Aloxaf/fzf-tab
+
+# Oh My Zsh
+getantidote/use-omz
+
+# Git
+ohmyzsh/ohmyzsh path:plugins/git
+
+# Chezmoi
+mass8326/zsh-chezmoi
